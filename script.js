@@ -1,8 +1,11 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://glseries.net/wisp/";
-const WISP_SERVERS = [{ name: "GLSeries", url: "wss://glseries.net/wisp/" }];
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://crispy-waddle-965gv6gq9q7q2p6vj-5001.app.github.dev/";
+const WISP_SERVERS = [
+  { name: "My Codespace Wisp", url: "wss://crispy-waddle-965gv6gq9q7q2p6vj-5001.app.github.dev/" },
+  { name: "GLSeries", url: "wss://glseries.net/wisp/" }
+];
 
 // Initialize default proxy server if not set
 if (!localStorage.getItem("proxServer")) {
