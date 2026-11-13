@@ -61,7 +61,7 @@ function isAdBlocked(url) {
             .replace(/\?/g, '\\?');
         const regex = new RegExp('^' + regexPattern + '$', 'i');
         if (regex.test(urlStr)) {
-            return true;
+            return false;
         }
     }
     return false;
