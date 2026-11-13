@@ -1,16 +1,6 @@
 
 const ADBLOCK = {
     blocked: [
-  "googlevideo.com/videoplayback",
-  "youtube.com/get_video_info",
-  "youtube.com/api/stats/ads",
-  "youtube.com/pagead",
-  "youtube.com/api/stats",
-  "youtube.com/get_midroll",
-  "youtube.com/ptracking",
-  "youtube.com/youtubei/v1/player",
-  "youtube.com/s/player",
-  "youtube.com/api/timedtext",
   "facebook.com/ads",
   "facebook.com/tr",
   "fbcdn.net/ads",
@@ -24,9 +14,6 @@ const ADBLOCK = {
   "adtechus.com",
   "amazon-adsystem.com",
   "adnxs.com",
-  "doubleclick.net",
-  "googlesyndication.com",
-  "googleadservices.com",
   "rubiconproject.com",
   "pubmatic.com",
   "criteo.com",
@@ -35,9 +22,6 @@ const ADBLOCK = {
   "outbrain.com",
   "moatads.com",
   "casalemedia.com",
-  "unityads.unity3d.com",
-  "/ads/",
-  "/adserver/",
   "/banner/",
   "/promo/",
   "/tracking/",
@@ -61,7 +45,7 @@ function isAdBlocked(url) {
             .replace(/\?/g, '\\?');
         const regex = new RegExp('^' + regexPattern + '$', 'i');
         if (regex.test(urlStr)) {
-            return false;
+            return true;
         }
     }
     return false;
